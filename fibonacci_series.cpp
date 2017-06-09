@@ -19,6 +19,7 @@ int main(void) {
 	cin >> fib_seq_len;
 	cout << "So this is the length that you want?   "  << fib_seq_len << endl;
 	//function call
+        cout << first << " " << second << " ";
 	fibo_function(&fib_seq_len);
 	cout << endl;
 	return 0;
@@ -28,7 +29,6 @@ int main(void) {
 //recursive function using call by reference
 int fibo_function(int * len) {
 	// the count would refer to the len in main and is shared that way
-	cout << first << second;
 	if (*len == 0) {
 		return 0;
 	}
@@ -37,6 +37,9 @@ int fibo_function(int * len) {
                 if(debug == 0) {
                         cout << "the next number in the sequence" << next << endl;
                 }
+		else {
+			cout << next << " " ; 
+		}
 		first = second;
 		second = next;	
 		*len -= 1;
