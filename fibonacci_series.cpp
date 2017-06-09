@@ -38,7 +38,7 @@ int fibo_function(int * len) {
                         cout << "the next number in the sequence" << next << endl;
                 }
 		else {
-			cout << next << " " ; 
+			cout << next << " "; 
 		}
 		first = second;
 		second = next;	
