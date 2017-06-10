@@ -1,9 +1,12 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 //recursive prototype using call by reference
 
 int fibo_function(int * len);
+// non recursive prototype 
+int fib_function(int len);
 //to debug the program
 static int debug;
 static int fib_seq_len;
@@ -13,15 +16,26 @@ static int next;
 int main(void) {
 	
 	//query
+	char fib_query[25];
 	cout << "debug?\n";
 	cin >> debug;
 	cout << "Please enter the amonut of numbers you want to see in the fibonacci sequence\n";
 	cin >> fib_seq_len;
-	cout << "So this is the length that you want?   "  << fib_seq_len << endl;
+	//cout << "So this is the length that you want?   "  << fib_seq_len << endl;
+	cout << "Would you like to have it done recursively\n";
+	cin.getline(fib_query,25);
+	cin >> fib_query;
 	//function call
         cout << first << " " << second << " ";
-	fibo_function(&fib_seq_len);
-	cout << endl;
+	
+	//conditional
+	if (strcmp(fib_query,"yes") == 0 ) {
+		fibo_function(&fib_seq_len);
+		cout << endl;
+	}
+	else {
+		fib_function(fib_seq_len);
+	}
 	return 0;
 
 }	
@@ -49,4 +63,11 @@ int fibo_function(int * len) {
 		fibo_function(len);
 	}
 		
-}	
+}
+
+int fib_function(int len) {
+	cout << "Executed properly\n";
+
+
+}
+	
