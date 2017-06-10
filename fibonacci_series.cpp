@@ -35,6 +35,7 @@ int main(void) {
 	}
 	else {
 		fib_function(fib_seq_len);
+                cout << endl;
 	}
 	return 0;
 
@@ -43,7 +44,7 @@ int main(void) {
 //recursive function using call by reference
 int fibo_function(int * len) {
 	// the count would refer to the len in main and is shared that way
-	if (*len == 0) {
+	if (*len == 2) {
 		return 0;
 	}
 	else {
@@ -66,8 +67,13 @@ int fibo_function(int * len) {
 }
 
 int fib_function(int len) {
-	cout << "Executed properly\n";
-
-
-}
+	//cout << "Executed properly\n";
+	// use a for loop to make it execute without recursion
+	for(int i = 2;i < len; i++) {
+                next = first + second;
+                cout << next << " ";
+                first = second;
+                second = next;	
+		}
+	}
 	
