@@ -3,12 +3,12 @@
 using namespace std;
 static char debug[25];
 // recusive loop for every word
-int converter(int  val);
+int converter(long int  val);
 int main (void) {
 	cout << "debug\n";
 	cin >> debug;
 	//cout << debug[0] << endl;
-	int word_number;
+	long int word_number;
 	cout << "Please enter a number to be converted to words digit by digit\n";
 	cin >> word_number;
 	if (strcmp(debug,"yes") == 0){
@@ -19,10 +19,10 @@ int main (void) {
 	return 0;
 
 }
-int converter(int  val) {
-		int digits = 1;
-		int size = val;
-		int keep = val;
+int converter(long int  val) {
+		long int digits = 1;
+		long int size = val;
+		long int keep = val;
 
 		while(size/digits > 10){
 			digits *= 10;	
