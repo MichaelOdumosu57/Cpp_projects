@@ -9,7 +9,9 @@ int main() {
 	char helper = 65; // help the pyramid
 	int count = 0; // for spaces to build the pyramid
 	int desired = 26; // amount of spaces needed
-
+	if (int(letter) >92) {
+		letter -= 32;
+	}	
 	while(ch != int(letter)+1) { //92 = Z = end of alphabet
         	while(count != desired) {
                 	cout << " ";          //making spaces
