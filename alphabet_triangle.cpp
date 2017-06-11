@@ -2,12 +2,15 @@
 #include <cstring>
 using namespace std;
 int main() {
+	char letter;
+	cout << "Up to which letter of the alphabet would you like to see?"<< endl;
+	cin >> letter;
         char ch = 65; //represents A from ascii, used so we wont use extra space making an array
 	char helper = 65; // help the pyramid
 	int count = 0; // for spaces to build the pyramid
 	int desired = 26; // amount of spaces needed
 
-	while(ch != 91) { //92 = Z = end of alphabet
+	while(ch != int(letter)+1) { //92 = Z = end of alphabet
         	while(count != desired) {
                 	cout << " ";          //making spaces
                 	count++;
